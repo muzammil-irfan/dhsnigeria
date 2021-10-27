@@ -1,5 +1,4 @@
 import React from 'react'
-import Navbar from '../Navbar';
 import LeftImageCard from '../LeftImageCard';
 export default function AboutPage() {
     const imgSource = `${process.env.PUBLIC_URL}/images/dhsn-about.PNG`;
@@ -10,11 +9,11 @@ export default function AboutPage() {
     return (
         <>
         <LeftImageCard 
-    imgSource={imgSource}
-    heading={heading}
-    headingClass={headingClass}
-    para={origionalPara}
-    buttonText={buttonText}
+    imgSourceLeft={imgSource}
+    headingLeft={heading}
+    headingClassLeft={headingClass}
+    paraLeft={origionalPara}
+    buttonTextLeft={buttonText}
     />
         </>
     )

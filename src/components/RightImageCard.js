@@ -1,5 +1,4 @@
 import React from "react";
-
 export default function RightImageCard(props) {
   return (
     <>
@@ -7,25 +6,26 @@ export default function RightImageCard(props) {
         <div className="row d-flex flex-column-reverse flex-lg-row align-items-center ">
           <div className="col-lg-8 ">
             <div className="card-body gap-3 d-grid">
-              <h1 className="card-title" className={props.headingClass}>
-                {props.heading}
-                <span className='text-primary'>{props.headingSpan}</span>
+     {/* eslint-disable-next-line */}
+              <h1 className="card-title" className={props.headingClassRight}>
+                {props.headingRight}
+                <span className='text-success'>{props.headingSpan}</span>
               </h1>
-              <p className="card-text fs-6">{props.para}</p>
+              <p className="card-text fs-6">{props.paraRight}</p>
               <p className="card-text">
-                <a href="#" class="btn btn-lg btn-outline-success">
-                  {props.buttonText}
+                <a href="/" class="btn btn-lg btn-outline-success">
+                  {props.buttonTextRight}
                 </a>
               </p>
             </div>
           </div>
           <div className="col-lg-4">
             <img
-              src={props.imgSource}
+              src={props.imgSourceRight}
               className="img-fluid rounded-start"
-              alt="..."
+              alt={props.imgAltRight}
             />
-          </div>
+          </div> 
         </div>
       </div>
       

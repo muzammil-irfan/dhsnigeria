@@ -17,10 +17,11 @@ export default function Units(props) {
                   <img
                     className="bd-placeholder-img card-img-top"
                     src={image1}
+                    alt='Server Problem'
                   />
                   <div className="card-body d-flex align-content-around flex-wrap" style={{height:'15rem'}}>
                     <p className="card-text">{props.cardText1} ...</p>
-                    <a href="#" className="btn btn-lg btn-outline-success my-2 ">
+                    <a href="/" className="btn btn-lg btn-outline-success my-2 ">
                       Read More
                     </a>
                   </div>
@@ -31,10 +32,11 @@ export default function Units(props) {
                   <img
                     className="bd-placeholder-img card-img-top"
                     src={image2}
+                    alt='Server Problem'
                   />
                   <div className="card-body d-flex align-content-around flex-wrap" style={{height:'15rem'}}>
                     <p className="card-text">{props.cardText2} ...</p>
-                    <a href="#" className="btn btn-lg btn-outline-success my-2">
+                    <a href="/" className="btn btn-lg btn-outline-success my-2">
                       Read More
                     </a>
                   </div>
@@ -45,10 +47,11 @@ export default function Units(props) {
                   <img
                     className="bd-placeholder-img card-img-top"
                     src={image3}
+                    alt='Server Problem'
                   />
                   <div className="card-body d-flex align-content-around flex-wrap" style={{height:'15rem'}}>
                     <p className="card-text">{props.cardText3} ...</p>
-                    <a href="#" className="btn btn-lg btn-outline-success my-2">
+                    <a href="/" className="btn btn-lg btn-outline-success my-2">
                       Read More
                     </a>
                   </div>
