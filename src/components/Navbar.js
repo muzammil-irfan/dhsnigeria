@@ -49,10 +49,10 @@ export default function Navbar() {
         <Flex flex={{ base: 1 }} justify={{ base: "center", md: "start" }}>
           <Image src={headerImage} w="259px" h="50px"/>
 
-          <Flex display={{ base: "none", md: "flex" }} ml={10}>
+        </Flex>
+          <Flex display={{ base: "none", md: "flex" }} justifyContent='center' align='center'>
             <DesktopNav />
           </Flex>
-        </Flex>
 
        
       </Flex>

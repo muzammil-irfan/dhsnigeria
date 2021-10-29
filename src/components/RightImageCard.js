@@ -2,7 +2,7 @@ import React from "react";
 export default function RightImageCard(props) {
   return (
     <>
-      <div className="card ">
+      <div className="card p-3 ">
         <div className="row d-flex flex-column-reverse flex-lg-row align-items-center ">
           <div className="col-lg-8 ">
             <div className="card-body gap-3 d-grid">
@@ -22,7 +22,7 @@ export default function RightImageCard(props) {
           <div className="col-lg-4">
             <img
               src={props.imgSourceRight}
-              className="img-fluid rounded-start"
+              className="img-fluid rounded-start "
               alt={props.imgAltRight}
             />
           </div> 

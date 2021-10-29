@@ -1,5 +1,4 @@
 import React from "react";
-
 export default function Units(props) {
   const env = process.env.PUBLIC_URL;
   const image1 = `${env}/images/banner3.jpg`;
@@ -10,7 +9,9 @@ export default function Units(props) {
       <div className="container">
         <div className="album py-3 bg-light">
           <div className="container">
-            <h2 className="text-center fw-bolder mb-3">Some of our Units</h2>
+          <div className="header p-2 m-4 fs-2 fw-bold">
+          <h1 className="text-center">Some Of Our Units</h1>
+        </div>
             <div className="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
               <div className="col">
                 <div className="card">
@@ -60,6 +61,7 @@ export default function Units(props) {
             </div>
           </div>
         </div>
+        
       </div>
       
     </>

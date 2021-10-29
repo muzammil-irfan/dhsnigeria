@@ -67,6 +67,7 @@ export const MobileNav = () => {
             borderStyle={"solid"}
             borderColor={useColorModeValue("gray.200", "gray.700")}
             align={"start"}
+            position='absolute'
           >
             {children &&
               children.map((child) => (

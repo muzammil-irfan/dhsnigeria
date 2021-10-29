@@ -1,13 +1,18 @@
-import { Heading, Text, SimpleGrid, VStack, HStack } from "@chakra-ui/layout";
+import { Heading, Text, SimpleGrid, VStack, HStack, Stack } from "@chakra-ui/layout";
 import React from "react";
 import { PhoneIcon, EmailIcon } from "@chakra-ui/icons";
 import { Link } from "react-router-dom";
 export default function Footer() {
   return (
     <>
+    
       <footer>
-        <SimpleGrid columns={[1, 2, 4]} spacing={10} p={10}>
-          <VStack alignItems="left">
+        <Stack
+        justify='flex-end'
+        spacing={0}
+        >
+        <SimpleGrid columns={[1, 2, 4]} spacing={10} p={10} bgGradient="linear(to-r,#006600,#303131)" color='#fff'>
+          <VStack alignItems="left" maxW='350px'>
             <Heading size="lg" my={3} py={2} borderBottom="2px">
               About Us
             </Heading>
@@ -17,7 +22,7 @@ export default function Footer() {
               scholar; (Late) Sheikh Muhammad Auwal Adam Albaniy Zaria
             </Text>
           </VStack>
-          <VStack alignItems="left">
+          <VStack alignItems="left" maxW='350px'>
             <Heading size="lg" my={3} py={2} borderBottom="2px">
               Useful Links
             </Heading>
@@ -26,7 +31,7 @@ export default function Footer() {
             <Link to="/project">Projects</Link>
             <Link to="/career">Careers</Link>
           </VStack>
-          <VStack alignItems="left">
+          <VStack alignItems="left" maxW='350px'>
             <Heading size="lg" my={3} py={2} borderBottom="2px">
               Contact Us
             </Heading>
@@ -64,7 +69,7 @@ export default function Footer() {
               </a>
             </Text>
           </VStack>
-          <VStack alignItems="left">
+          <VStack alignItems="left" maxW='350px'>
             <Heading size="lg" my={3} py={2} borderBottom="2px">
               Follow Us
             </Heading>
@@ -73,11 +78,12 @@ export default function Footer() {
             </Text>
           </VStack>
         </SimpleGrid>
-          <HStack justifyContent="center" >
+          <HStack justifyContent="center" bgColor='#006600' color='#fff' p={6}>
             <Text>
             © Copyright 2020. All Rights Reserved.
             </Text>
           </HStack>
+          </Stack>
       </footer>
     </>
   );

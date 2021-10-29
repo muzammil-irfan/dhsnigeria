@@ -1,5 +1,6 @@
 import RightImageCard from "../RightImageCard";
 import { Tabs, TabList, TabPanels, Tab, TabPanel } from "@chakra-ui/react";
+import { Heading } from "@chakra-ui/layout";
 export default function Units2() {
   const buttonText = "Read More";
   const env = process.env.PUBLIC_URL;
@@ -10,8 +11,11 @@ export default function Units2() {
   const headingClass = 'h4';
   return (
     <>
-    <div className="container">
-      <Tabs >
+    <div className="container my-3">
+      <Heading textAlign='center'>
+        Units
+        </Heading>
+      <Tabs colorScheme='green'>
         <TabList >
           <Tab>DHS Unit</Tab>
           <Tab>ASIA Unit</Tab>

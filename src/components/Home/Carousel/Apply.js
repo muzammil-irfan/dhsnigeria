@@ -13,6 +13,7 @@ import { Button } from "@chakra-ui/button";
 import { FormControl, FormLabel } from "@chakra-ui/form-control";
 import { useDisclosure } from "@chakra-ui/hooks";
 import { Select } from "@chakra-ui/select";
+import { Stack } from "@chakra-ui/layout";
 
 export default function Apply() {
   const initialRef = React.useRef();
@@ -24,9 +25,16 @@ export default function Apply() {
   const boarding = "(boarding)";
   return (
     <>
-      <button type="button" class="btn btn-success  mx-2" onClick={onOpen}>
+    <Stack
+      direction='row'
+    >
+      <button type="button" class="btn btn-success  mx-2 w-50" onClick={onOpen}>
         Apply
       </button>
+      <button type="button" class="btn btn-success  mx-2 w-50">
+        Portal
+        </button>
+        </Stack>      
       <Modal
         initialFocusRef={initialRef}
         finalFocusRef={finalRef}

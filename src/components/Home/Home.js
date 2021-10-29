@@ -13,7 +13,7 @@ export default function Home() {
     const UnitText3 = 'This unit focus on training intellectual Islamic scholars. It consist of a secondary school (Day & Boarding) and diploma programs, headed by a Principal and a Provost respectively. The school is structured for an Islamic, Arabic, Art and Science based learning environment and has students from both national and international countries.';
     return (
         <>
-        <Carousel heading="Welcome to DHSN" para1={para1} para2=""/>
+        <Carousel heading="Welcome to DHSN" para={para1} />
         <About />
         <Units 
         cardText1={UnitText1.slice(0,125)} 

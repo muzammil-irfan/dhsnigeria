@@ -1,5 +1,6 @@
 import React from 'react'
 import LeftImageCard from '../LeftImageCard';
+import {Box} from '@chakra-ui/layout'
 export default function AboutPage() {
     const imgSource = `${process.env.PUBLIC_URL}/images/dhsn-about.PNG`;
   const heading = 'About DHSN';
@@ -8,6 +9,7 @@ export default function AboutPage() {
   const buttonText = 'Our journey';
     return (
         <>
+        <Box height='100vh'>
         <LeftImageCard 
     imgSourceLeft={imgSource}
     headingLeft={heading}
@@ -15,6 +17,7 @@ export default function AboutPage() {
     paraLeft={origionalPara}
     buttonTextLeft={buttonText}
     />
+        </Box>
         </>
     )
 }
