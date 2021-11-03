@@ -1,20 +1,46 @@
+import { Container,Flex,Heading,Box } from "@chakra-ui/layout";
 import React from "react";
+import CenterImageCard from "../CenterImageCard";
 export default function Units(props) {
-  const env = process.env.PUBLIC_URL;
-  const image1 = `${env}/images/banner3.jpg`;
-  const image2 = `${env}/images/banner4.jpg`;
-  const image3 = `${env}/images/banner5.jpg`;
+  const env = `${process.env.PUBLIC_URL}/images`;
+  const data = [
+    {
+      text:"This is a centre that is headed by a Coordinator and operates as a unit under the general DHSN, it activities are centered for the Islamic foundation and propagations.",
+      image:`${env}/banner3.jpg`
+    },
+    {
+      text:"This comprises of Pre-primary and Primary school (Day), Junior and Senior Secondary School (boarding). The school is structured for as standard science based learning environment and has students from both national and international countries.",
+      image:`${env}/banner4.jpg`
+    },
+    {
+      text:"This unit focus on training intellectual Islamic scholars. It consist of a secondary school (Day & Boarding) and diploma programs, headed by a Principal and a Provost respectively. The school is structured for an Islamic, Arabic, Art and Science based learning environment and has students from both national and international countries.",
+      image:`${env}/banner5.jpg`
+    }
+  ];
   return (
     <>
-      <div className="container">
-        <div className="album py-3 bg-light">
-          <div className="container">
-          <div className="header p-2 m-4 fs-2 fw-bold">
-          <h1 className="text-center">Some Of Our Units</h1>
-        </div>
+    <Container maxW="7xl" align="center">
+      <Heading textAlign='center'>
+        Some Of Our Units
+      </Heading>
+      <Flex spacing={6} my={6} justifyContent="space-around" flexDirection={{base:"column",sm:"row"}}>
+        {
+          data.map((data)=>{
+            return(
+              <Box>
+              <CenterImageCard maxWidth="350px" para={data.text} imgSource={data.image} buttonText="Read more"/>
+              </Box>
+            )
+          })
+        }
+        
+      </Flex>
+    </Container>
+        {/* <div className="album py-3 bg-light ">
+          
             <div className="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
               <div className="col">
-                <div className="card">
+                <div className="card ">
                   <img
                     className="bd-placeholder-img card-img-top"
                     src={image1}
@@ -60,9 +86,7 @@ export default function Units(props) {
               </div>
             </div>
           </div>
-        </div>
-        
-      </div>
+        </div> */}
       
     </>
   );

@@ -26,12 +26,11 @@ const settings = {
   slidesToShow: 1,
   slidesToScroll: 1,
 };
-const imageUrl = `${process.env.PUBLIC_URL}/images/main-banner.jpg`;
 export default function CaptionCarousel(props) {
   // As we have used custom buttons, we need a reference variable to
   // change the state
   const [slider, setSlider] = React.useState(null);
-
+  const imageUrl = `${process.env.PUBLIC_URL}/images/main-banner.jpg`
   // These are the breakpoints which changes the position of the
   // buttons as the screen size changes
   const top = useBreakpointValue({ base: "90%", md: "50%" });
@@ -57,7 +56,6 @@ export default function CaptionCarousel(props) {
   ];
 
   return (
-    <div className="container">
       <Box
         mt={2}
         position={"relative"}
@@ -80,13 +78,14 @@ export default function CaptionCarousel(props) {
         {/* Left Icon */}
         <IconButton
           aria-label="left-arrow"
-          variant=""
+          variant="ghost"
           position="absolute"
           left={side}
           top={top}
           transform={"translate(0%, -50%)"}
           zIndex={2}
           onClick={() => slider?.slickPrev()}
+          
         >
           <BiLeftArrowAlt size="40px" />
         </IconButton>
@@ -143,6 +142,6 @@ export default function CaptionCarousel(props) {
           ))}
         </Slider>
       </Box>
-    </div>
+    
   );
 }

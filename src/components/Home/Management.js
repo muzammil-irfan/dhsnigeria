@@ -1,51 +1,47 @@
+import { Container, Heading, Flex } from "@chakra-ui/layout";
 import React from "react";
 import ManagementCard from "./ManagementCard";
-
+const env = `${process.env.PUBLIC_URL}/images/`;
+const data = [
+  {
+    image: `${env}Adam-AUwal-Abaniy.jpg`,
+    text1: "(Late) Sheikh Muhammad Auwal Adam (Albaniy)",
+    text2: "| Founder",
+  },
+  {
+    image: `${env}Prof-Nafiu-Abdu.jpg`,
+    text1: "Prof. Abdurrafiu Abdulganiyyu",
+    text2: "| Director",
+  },
+  {
+    image: `${env}Dr-Kabir-Asgar.jpg`,
+    text1: "Dr. Kabir Abubakar Amin (Asgar)",
+    text2: "| Deputy Director",
+  },
+  {
+    image: `${env}yahaya-abdullahi.jpeg`,
+    text1: "Shiekh Yahaya Abdullahi",
+    text2: "| Chairman, Board of Trustees",
+  },
+];
 export default function Management() {
   return (
     <>
-      <div className="container">
-        <div className="header p-2 m-4 fs-2 fw-bold">
-          <h1 className="text-center">Management</h1>
-        </div>
-        <div className="container d-flex justify-content-center">
-          <div className="row row-cols-1 row-cols-sm-2 row-cols-xl-4 ">
-            <div className="col">
+      <Container maxW="6xl" align="center">
+        <Heading my={3}>Management</Heading>
+        <Flex flexDirection={{ base: "column", md: "row" }} justify="center">
+          {data.map((data) => {
+            return (
               <ManagementCard
-                imgSource={`${process.env.PUBLIC_URL} /images/Adam-AUwal-Abaniy.jpg`}
-                buttonText="(Late) Sheikh Muhammad Auwal Adam (Albaniy)"
-                buttonText2="| Founder"
+                img={data.image}
+                text1={data.text1}
+                text2={data.text2}
+                maxWidth="220px"
               />
-            </div>
-            <div className="col">
-              <ManagementCard
-                imgSource={`${process.env.PUBLIC_URL} /images/Prof-Nafiu-Abdu.jpg`}
-                buttonText="Prof. Abdurrafiu Abdulganiyyu"
-                buttonText2="| Director"
-              />
-            </div>
-            <div className="col">
-              <ManagementCard
-                imgSource={`${process.env.PUBLIC_URL} /images/Dr-Kabir-Asgar.jpg`}
-                buttonText="Dr. Kabir Abubakar Amin (Asgar)"
-                buttonText2="| Deputy Director"
-              />
-            </div>
-            <div className="col">
-              <ManagementCard
-                imgSource={`${process.env.PUBLIC_URL} /images/yahaya-abdullahi.jpeg`}
-                buttonText="Shiekh Yahaya Abdullahi"
-                buttonText2="| Chairman, Board of Trustees"
-              />
-            </div>
-          </div>
-        </div>
-        <div className=" my-4 row justify-content-center">
-          <button className="btn w-50 btn-outline-success py-3 fs-5" type='button'>
-            View All Staff
-          </button>
-        </div>
-      </div>
+            );
+          })}
+        </Flex>
+      </Container>
     </>
   );
 }

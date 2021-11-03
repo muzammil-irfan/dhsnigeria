@@ -1,35 +1,36 @@
 import React from "react";
+import {
+  Box,
+  Stack,
+  Flex,
+  Image,
+  Heading,
+  Button,
+  Container,
+  Text
+} from "@chakra-ui/react";
 import { Link } from "react-router-dom";
 // ("https://source.unsplash.com/600x600/?nature,sea");
 // About DHSN
 export default function LeftImageCard(props) {
   return (
-    <div className="container">
-      <div className="card my-5">
-        <div className="row d-flex align-items-center">
-          <div className="col-lg-4">
-            <img
-              src={props.imgSourceLeft}
-              className="img-fluid rounded-start"
-              alt="..."
-            />
-          </div>
-          <div className="col-lg-8 ">
-            <div className="card-body gap-3 d-grid">
-              {/* eslint-disable-next-line */}
-              <h1 className="card-title" className={props.headingClassLeft}>
-                {props.headingLeft}
-              </h1>
-              <p className="card-text fs-6">{props.paraLeft}</p>
-              <p className="card-text">
-                <Link to={props.linkLeft} class="btn btn-lg btn-outline-success">
-                  {props.buttonTextLeft}
-                </Link>
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+    <Container maxW='6xl' my={12} >
+      <Flex columns={2} flexDirection={{md:'row',base:'column'}} >
+        <Stack justify='center'>
+            <Box >
+              <Image src={props.imgSourceLeft} alt={props.imgAltLeft} maxW={props.maxWidth}/>
+            </Box>
+        </Stack>
+            <Stack p={6} spacing={6} >
+              <Heading>{props.headingLeft}</Heading>
+              <Text>{props.paraLeft}</Text>
+              <Box>
+            <Link to={props.linkLeft}>    
+              <Button bgColor="#006600"  _hover={{bgColor:'#005500'}} color='#fff'>{props.buttonTextLeft}</Button>
+            </Link>
+              </Box>
+            </Stack>
+        </Flex>
+        </Container>
   );
 }

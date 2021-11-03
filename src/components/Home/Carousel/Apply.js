@@ -13,7 +13,7 @@ import { Button } from "@chakra-ui/button";
 import { FormControl, FormLabel } from "@chakra-ui/form-control";
 import { useDisclosure } from "@chakra-ui/hooks";
 import { Select } from "@chakra-ui/select";
-import { Stack } from "@chakra-ui/layout";
+import { SimpleGrid } from "@chakra-ui/layout";
 
 export default function Apply() {
   const initialRef = React.useRef();
@@ -25,16 +25,17 @@ export default function Apply() {
   const boarding = "(boarding)";
   return (
     <>
-    <Stack
-      direction='row'
+    <SimpleGrid
+      columns={2}
+      spacing={3}
     >
-      <button type="button" class="btn btn-success  mx-2 w-50" onClick={onOpen}>
+      <Button bgColor='#006600' _hover={{bgColor:'#005500'}}  onClick={onOpen}>
         Apply
-      </button>
-      <button type="button" class="btn btn-success  mx-2 w-50">
+      </Button>
+      <Button bgColor='#006600' _hover={{bgColor:'#005500'}} >
         Portal
-        </button>
-        </Stack>      
+        </Button>
+        </SimpleGrid>      
       <Modal
         initialFocusRef={initialRef}
         finalFocusRef={finalRef}
@@ -74,10 +75,10 @@ export default function Apply() {
               <Input ref={initialRef} placeholder="Enter your first name" />
             </FormControl>
 
-            <FormControl mt={4}>
-              <FormLabel>Last name</FormLabel>
-              <Input placeholder="Enter your last name" />
-            </FormControl>
+              <FormControl mt={4}>
+                <FormLabel>Last name</FormLabel>
+                <Input placeholder="Enter your last name" />
+              </FormControl>
             <FormControl mt={4}>
               <FormLabel>Username</FormLabel>
               <Input placeholder="Create a username" />

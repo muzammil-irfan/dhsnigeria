@@ -15,6 +15,7 @@ export default function About() {
     headingClassLeft={headingClass}
     paraLeft={`${origionalPara.slice(0,350)}...`}
     buttonTextLeft={buttonText} 
+    maxWidth="320px"
     linkLeft={linkLeft}
     />
     </>

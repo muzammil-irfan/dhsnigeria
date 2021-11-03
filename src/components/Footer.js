@@ -2,6 +2,7 @@ import { Heading, Text, SimpleGrid, VStack, HStack, Stack } from "@chakra-ui/lay
 import React from "react";
 import { PhoneIcon, EmailIcon } from "@chakra-ui/icons";
 import { Link } from "react-router-dom";
+import Icons from "./Icons";
 export default function Footer() {
   return (
     <>
@@ -26,7 +27,7 @@ export default function Footer() {
             <Heading size="lg" my={3} py={2} borderBottom="2px">
               Useful Links
             </Heading>
-            <Link to="/about">About</Link>
+            <Link to="/about" _hover={{color:'#fff'}}>About</Link>
             <Link to="/units">Units</Link>
             <Link to="/project">Projects</Link>
             <Link to="/career">Careers</Link>
@@ -69,13 +70,16 @@ export default function Footer() {
               </a>
             </Text>
           </VStack>
-          <VStack alignItems="left" maxW='350px'>
+          <VStack alignItems="left" maxW='350px' spacing={1} >
             <Heading size="lg" my={3} py={2} borderBottom="2px">
               Follow Us
             </Heading>
              <Text>
             No. 4 Madarkachi Road, Gaskiya Layout, Zaria,  Kaduna State - Nigeria.
             </Text>
+            <HStack py={3}>
+              <Icons hover={{Color:'#fff'}} />
+            </HStack>
           </VStack>
         </SimpleGrid>
           <HStack justifyContent="center" bgColor='#006600' color='#fff' p={6}>

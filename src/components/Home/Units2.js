@@ -1,6 +1,6 @@
 import RightImageCard from "../RightImageCard";
 import { Tabs, TabList, TabPanels, Tab, TabPanel } from "@chakra-ui/react";
-import { Heading } from "@chakra-ui/layout";
+import { Heading,Container } from "@chakra-ui/layout";
 export default function Units2() {
   const buttonText = "Read More";
   const env = process.env.PUBLIC_URL;
@@ -11,7 +11,7 @@ export default function Units2() {
   const headingClass = 'h4';
   return (
     <>
-    <div className="container my-3">
+    <Container maxW="6xl">
       <Heading textAlign='center'>
         Units
         </Heading>
@@ -32,6 +32,7 @@ export default function Units2() {
             headingSpan="(DHS)"
             paraRight="This is a centre that is headed by a Coordinator and operates as a unit under the general DHSN, it activities are centered for the Islamic foundation and propagations."
             buttonTextRight={buttonText}
+            maxWidth="300px"
           />
         </TabPanel>
         <TabPanel p={0}>
@@ -42,6 +43,7 @@ export default function Units2() {
             headingSpan="(ASIA)"
             paraRight="This comprises of Pre-primary and Primary school (Day), Junior and Senior Secondary School (boarding). The school is structured for as standard science based learning environment and has students from both national and international countries."
             buttonTextRight={buttonText}
+            maxWidth="300px"
           />
         </TabPanel>
         <TabPanel p={0}>
@@ -52,6 +54,7 @@ export default function Units2() {
             headingSpan="(SACHIS)"
             paraRight="This unit focus on training intellectual Islamic scholars. It consist of a secondary school (Day &nbsp; Boarding)  and diploma programs, headed by a Principal and a Provost respectively. The school is structured for an Islamic, Arabic, Art and Science based learning environment and has students from both national and international countries."
             buttonTextRight={buttonText}
+            maxWidth="300px"
           />
         </TabPanel>
         <TabPanel p={0}>
@@ -62,11 +65,12 @@ export default function Units2() {
             headingSpan="(AICI)"
             paraRight="This is a unit serving for the proposed (soon to be established) Albaniy Institute of Computing and ICT, it is headed by a Head of Unit, it’s a unit that manages all the ICT affairs of DHSN at large, other unit ICT, The Media, E-learning, Workshops, Trainings, Certificates and Diploma in Computer Sciences (programs) etc."
             buttonTextRight={buttonText}
+            maxWidth="300px"
           />
         </TabPanel>
       </TabPanels>
       </Tabs>
-      </div>
+      </Container>
     </>
   );
 }

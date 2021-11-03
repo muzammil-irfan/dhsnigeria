@@ -16,6 +16,7 @@ export default function AboutPage() {
     headingClassLeft={headingClass}
     paraLeft={origionalPara}
     buttonTextLeft={buttonText}
+    maxWidth="500px"
     />
         </Box>
         </>
