@@ -1,6 +1,6 @@
 import React from "react";
 import Home from "./components/Home/Home";
-import Navbar from "./components/Navbar";
+import Header from "./components/Header";
 import Fees from "./components/Fees";
 import AboutPage from "./components/AboutPage/AboutPage";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
@@ -8,11 +8,12 @@ import Management from "./components/Management/ManagementPage";
 import Footer from "./components/Footer";
 import Contact from "./components/Contact";
 import NoMatch from "./components/NoMatch";
+import NewFees from "./components/Fees";
 function App() {
   return (
     <>
       <Router>
-        <Navbar />
+        <Header />
         <Switch>
           <Route exact path="/">
             <Home />

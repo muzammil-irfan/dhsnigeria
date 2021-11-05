@@ -1,4 +1,4 @@
-import { Heading, Text, SimpleGrid, VStack, HStack, Stack } from "@chakra-ui/layout";
+import { Heading, Text, SimpleGrid, VStack, HStack, Stack,Box } from "@chakra-ui/layout";
 import React from "react";
 import { PhoneIcon, EmailIcon } from "@chakra-ui/icons";
 import { Link } from "react-router-dom";
@@ -7,7 +7,7 @@ export default function Footer() {
   return (
     <>
     
-      <footer>
+      <Box width="full">
         <Stack
         justify='flex-end'
         spacing={0}
@@ -88,7 +88,7 @@ export default function Footer() {
             </Text>
           </HStack>
           </Stack>
-      </footer>
+      </Box>
     </>
   );
 }
