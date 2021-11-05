@@ -8,7 +8,7 @@ import Management from "./components/Management/ManagementPage";
 import Footer from "./components/Footer";
 import Contact from "./components/Contact";
 import NoMatch from "./components/NoMatch";
-import NewFees from "./components/Fees";
+import Fees from "./components/Fees";
 function App() {
   return (
     <>
