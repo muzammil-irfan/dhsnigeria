@@ -1,4 +1,4 @@
-import { Grid, Box, Heading, Text, Container, Divider } from "@chakra-ui/layout";
+import { Grid, Box, Heading, Text, Container } from "@chakra-ui/layout";
 import { GridItem } from "@chakra-ui/react";
 import React from "react";
 const tableHeader = [
